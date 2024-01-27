@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<body>
+    <header id="home">
+        <nav>
+            <div class="left">
+                <img src="imgs/logo.svg" alt="4040">
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="#price"><i class="fa-solid fa-money-check-dollar"></i> Price</a></li>
+                    <li><a href="#sitePlan"><i class="fa-brands fa-steam"></i>Site & Floor Plan</a></li>
+                    <li><a href="#aminities"><i class="fa-solid fa-wifi"></i>Aminities</a></li>
+                    <li><a href="#location"><i class="fa-solid fa-location-dot"></i>Location</a></li>
+                    <li><a href="#vertualTour"><i class="fa-brands fa-youtube"></i>Vertual Site Tour</a></li>
+                    <li><a href="javascript:showModal('Download Brochure', 'Download Now')"><i
+                                class="fa-solid fa-file-arrow-down fa-bounce"></i>Brochre</a></li>
+                </ul>
+            </div>
+
+            <div class="right-drop-down" onclick="showMenu()">
+                <i class="fa-solid fa-bars"></i>    
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <div class="main-container">
+                <!-- <div class="img-container"></div> -->
+                <div id="imgCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img class="carousel-img" src="imgs/bg-1.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img class="carousel-img" src="imgs/bg-2.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="carousel-img" src="imgs/bg-3.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#imgCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#imgCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <div class="contact-right">
+                    <div>
+                        <div class="contact-right-org">
+                            <button class="btn-head"
+                                onclick="showModal('Organize Site Visit', 'Request Site Visit')">Organize Site
+                                Visit</button>
+
+                            <a class="btn-head" target="_blank" href="https://api.whatsapp.com/send?phone=7899190381">
+                                <i class="fa-brands fa-whatsapp"></i>+91 7899190381</a>
+                        </div>
+
+                        <div class="call-back" onclick="showModal('Immediate Call Back', 'Request Call Now')">
+                            <button class="button"><i class="fa-solid fa-phone-volume fa-fade"></i> Request Call
+                                Back</button>
+                        </div>
+
+                        <div class="contact-form">
+                            <form onsubmit="sendMail(event)" id="callBackForm">
+                                <input type="text" required name="name" id="name" placeholder="Name">
+
+                                <input type="tel" required name="phone" id="phone" placeholder="Phone number">
+
+                                <input type="email" name="email" id="email" placeholder="Email">
+
+
+                                <button onclick="submit" class="button"><i
+                                        class="fa-solid fa-cash-register fa-fade"></i>Pre-Register
+                                    Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="our-cards">
+                <div class="our-card">
+                    <h1 class="color-primary">Provident Ecopolitan</h1>
+                    <h3 class="color-primary">At KIADB Aerospace Park, Bangalore</h3>
+                    <p>
+                        Provident Ecopolitan is one of the best residential projects located at Aerospace Park in
+                        Bengaluru. This project has been developed by well-known developer Provident Housing, an
+                        associate of Purvankara Limited, and promises an outstanding living experience with unmatched
+                        amenities. The development will have 2-bedroom, and 3-bedroom residential flats that are
+                        thoughtfully designed and come with world-class amenities
+                    </p>
+
+                    <p>The project is spread over wide acres and will have 75% open space for the residents to enjoy.
+                        Some of the highlights of the project include a swimming pool, Tennis court, children's play
+                        area, clubhouse, gymnasium, jogging track, and landscaped gardens. There will also be a retail
+                        zone within the complex for everyday convenience.</p>
+
+                    <button class="button" onclick="showModal('Download Brochure', 'Download Now')"><i
+                            class="fa-solid fa-file-arrow-down fa-bounce"></i> Download
+                        Brochure</button>
+
+                    <h3 class="vertical-our-card-text color-primary">Overview</h3>
+                </div>
+
+
+                <div id="price" class="price our-card d-flex flex-row justify-content-between">
+                    <div>
+                        <table class="table ">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Carpet Area</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1 BHK</td>
+                                    <td>600 - 750 Sq-Ft</td>
+                                    <td>&#8377;33 Lacs* Onwards <button
+                                            onclick="showModal('Send Me Costing Details', 'Send Now')"
+                                            class="btn-secondary btn mx-4">Price
+                                            BreakUp</button> </td>
+                                </tr>
+                                <tr>
+                                    <td>2 BHK</td>
+                                    <td>950 - 1100 Sq-Ft</td>
+                                    <td>&#8377;60 Lacs* Onwards <button
+                                            onclick="showModal('Send Me Costing Details', 'Send Now')"
+                                            class="btn-secondary btn mx-4">Price
+                                            BreakUp</button> </td>
+                                </tr>
+
+                                <tr>
+                                    <td>3 BHK</td>
+                                    <td>1200 - 1450 Sq-Ft</td>
+                                    <td>&#8377;72 Lacs* Onwards <button
+                                            onclick="showModal('Send Me Costing Details', 'Send Now')"
+                                            class="btn-secondary btn mx-4">Price
+                                            BreakUp</button> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div>
+                        <div class="inner-our-card" onclick="showModal('Send Me Costing Details', 'Send Now')">
+                            <div>
+                                <img src="imgs/costing-details.webp" alt="">
+                                <div class="our-card-overlay">
+                                    <button class="btn-dark btn btn-bg-animate">Enquire Now</button>
+                                </div>
+                            </div>
+                            <div class="inner-our-card-title">
+                                <h5>Complete Costing Details</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="vertical-our-card-text color-primary">Price</h3>
+                </div>
+
+                <div id="sitePlan" class="our-card">
+                    <h3 class="color-primary">Master Plan</h3>
+                    <div class="master-plan inner-our-card">
+                        <div>
+                            <img src="imgs/master-plan.webp" alt="">
+
+                            <div class="our-card-overlay">
+                                <button class="btn-dark btn btn-bg-animate">View Master Plan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="my-4 color-primary">Floor Plan</h3>
+                    <div class="floor-plan">
+                        <div class="inner-our-card" onclick="showModal('Send Me Plan Details', 'Send Now')">
+                            <div>
+                                <img src="imgs/1bhk.webp" alt="">
+
+                                <div class="our-card-overlay">
+                                    <button class="btn-dark btn btn-bg-animate">Enquire Now</button>
+                                </div>
+                            </div>
+
+                            <div class="inner-our-card-title">
+                                <h5>1BHK</h5>
+                            </div>
+                        </div>
+
+                        <div class="inner-our-card" onclick="showModal('Send Me Plan Details', 'Send Now')">
+                            <div>
+                                <img src="imgs/2bhk.webp" alt="">
+
+                                <div class="our-card-overlay">
+                                    <button class="btn-dark btn btn-bg-animate">Enquire Now</button>
+                                </div>
+                            </div>
+
+                            <div class="inner-our-card-title">
+                                <h5>2BHK</h5>
+                            </div>
+                        </div>
+
+                        <div class="inner-our-card" onclick="showModal('Send Me Plan Details', 'Send Now')">
+                            <div>
+                                <img src="imgs/3bhk.webp" alt="">
+
+                                <div class="our-card-overlay">
+                                    <button class="btn-dark btn btn-bg-animate">Enquire Now</button>
+                                </div>
+                            </div>
+
+                            <div class="inner-our-card-title">
+                                <h5>3BHK</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="vertical-our-card-text color-primary">Site And Floor Plan</h3>
+                </div>
+
+                <div id="aminities" class="our-card">
+                    <h3 class="vertical-our-card-text color-primary">Amemities</h3>
+
+                    <div class="amenities">
+                        <div class="amenities-our-card">
+                            <img src="imgs/swiming-pool.webp" alt="">
+                            <b class="text-light amenities-title">Swimming Pool</b>
+                        </div>
+
+                        <div class="amenities-our-card">
+                            <img src="imgs/conveneice-store.webp" alt="">
+                            <b class="text-light amenities-title">Convenience Store</b>
+                        </div>
+
+                        <div class="amenities-our-card">
+                            <img src="imgs/gym.webp" alt="">
+                            <b class="text-light amenities-title">Gymnasium</b>
+                        </div>
+
+                        <div class="amenities-our-card">
+                            <img src="imgs/kids-play.webp" alt="">
+                            <b class="text-light amenities-title">Kids Play Area</b>
+                        </div>
+
+                        <div class="amenities-our-card">
+                            <img src="imgs/multipurpose-hall.webp" alt="">
+                            <b class="text-light amenities-title">Multipurpose Hall</b>
+                        </div>
+
+                        <div class="amenities-our-card">
+                            <img src="imgs/reflexology-track.webp" alt="">
+                            <b class="text-light amenities-title">Reflexology Track</b>
+                        </div>
+
+                        <div class="amenities-our-card">
+                            <img src="imgs/spa.webp" alt="">
+                            <b class="text-light amenities-title">Spa</b>
+                        </div>
+
+                        <div class="amenities-our-card">
+                            <img src="imgs/walking-path.webp" alt="">
+                            <b class="text-light amenities-title">Walking</b>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="location" class="our-card">
+                    <h3 class="color-primary">Map View</h3>
+                    <div class="location my-3">
+                        <div class="mapouter">
+                            <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0"
+                                    scrolling="no" marginheight="0" marginwidth="0"
+                                    src="https://maps.google.com/maps?width=491&amp;height=244&amp;hl=en&amp;q=Provident ecopoli&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="inner-our-card" onclick="showModal('Arrange Site Visit', 'Arrange Now')">
+                            <img src="imgs/location.webp" alt="">
+
+                            <div class="our-card-overlay">
+                                <button class="btn-dark btn btn-bg-animate">View Location Map</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 my-2">
+                        <div class="col my-2"><i class="color-primary fa-solid fa-location-dot"></i> Sterling English
+                            School – 10 min
+                        </div>
+                        <div class="col my-2"><i class="color-primary fa-solid fa-location-dot"></i> Cratis Hospital –
+                            35 min</div>
+                        <div class="col my-2"><i class="color-primary fa-solid fa-location-dot"></i> Bangalore
+                            International Airport –
+                            15 min</div>
+                        <div class="col my-2"><i class="color-primary fa-solid fa-location-dot"></i> The Galleria Mall –
+                            30 min</div>
+                        <div class="col my-2"><i class="color-primary fa-solid fa-location-dot"></i> SH 104 – 3 min
+                        </div>
+                        <div class="col my-2"><i class="color-primary fa-solid fa-location-dot"></i> Wipro – 1 min</div>
+                    </div>
+                    <h3 class="vertical-our-card-text color-primary">Location</h3>
+                </div>
+
+
+                <div id="vertualTour" class="our-card">
+                    <div class="vertual-tour">
+                        <div class="yt-video">
+                            <iframe frameborder="0" class="d-video" allowfullscreen="" width="100%" height="100%"
+                                sandbox="allow-forms allow-scripts allow-pointer-lock allow-same-origin allow-top-navigation"
+                                src="https://www.youtube.com/embed/oEQSTjM-gKg?autoplay=1&amp;rel=0&amp;end=10"></iframe>
+                        </div>
+                        <h3 class="vertical-our-card-text color-primary">Vertual Site Tour</h3>
+                    </div>
+                </div>
+
+
+                <div class="our-card">
+                    <div class="about">
+                        <img src="imgs/about-logo.jpg" alt="">
+                        <h4>About Provident</h4>
+
+                        <p>Provident Housing is a real estate development company based in Bangalore, India. The company
+                            was established in 1975 and has since then become one of the leading developers in the
+                            country, with a focus on affordable housing. Provident Housing is a subsidiary of
+                            Puravankara Limited, a well-known real estate brand in India.</p>
+
+                        <p>Provident Housing has completed several residential projects in Bangalore, Chennai,
+                            Hyderabad, Coimbatore, Mangalore, and Goa. The company's projects range from affordable
+                            apartments to luxury villas, catering to a wide range of customers. Provident Housing is
+                            committed to delivering quality homes that are affordable and offer a comfortable living
+                            experience.</p>
+
+                        <p>
+                            The company has a strong focus on sustainability and green initiatives, incorporating
+                            features like rainwater harvesting, solar power, and waste management systems in its
+                            projects. Provident Housing also offers a range of amenities like a clubhouse, swimming
+                            pool, gym, and sports facilities, among others.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+        <div id="myModel" class="modal">
+            <div class="model-content">
+                <div class="model-header">
+                    <h5 id="modelHeader">Download Brochure</h5>
+                    <span class="close" onclick="closeModal()">&times;</span>
+                </div>
+                <div class="model-body">
+                    <div class="left">
+                        <b class="color-primary">We Promise</b>
+                        <div>
+                            <i class="fa-solid fa-headset color-primary"></i>
+                            <span>Instanct call back</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-car-on color-primary"></i>
+                            <span>Free Site Visit</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-hand-holding-dollar color-primary"></i>
+                            <span>Unmatched Price</span>
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <h6>Register Here And Avail the <span class="color-primary">Best Offers!!</span></h6>
+
+                        <form onsubmit="sendMail(event)" id="callBackForm">
+                            <input type="text" required name="name" id="name" placeholder="Name">
+
+                            <input type="tel" required name="phone" id="phone" placeholder="Phone number">
+
+                            <input type="email" name="email" id="email" placeholder="Email">
+
+
+                            <button onclick="submit" class="button" id="modelBtn">Download Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer><b>Disclaimer :</b> The content is for information purposes only and does not constitute
+        an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned
+        are subject to availability. Images for representation purposes only. This is the official website of authorized
+        marketing partner. We may share data with RERA registered brokers/companies for further processing. We may also
+        send updates to the mobile number/email id registered with us. All Rights Reserved.</footer>
+
+    <script src="index.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

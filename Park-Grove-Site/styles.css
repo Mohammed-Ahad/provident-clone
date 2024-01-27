@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(231, 232, 233);
+}
+
+nav {
+    background-color: white;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+nav .left{
+    width: 150px;
+}
+
+nav .right ul {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+}
+
+nav .right ul li {
+    list-style: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav .right ul li {
+    cursor: pointer;
+}
+
+
+nav .right ul li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: left;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    transition: transform 0.3s;
+}
+
+nav .right ul li:hover:after {
+    transform: scale(1);
+}
+
+
+nav .right ul li i {
+    padding: 5px;
+}
+
+.container{
+    position: relative;
+}
+
+.container .img-container {
+    background-image: url(imgs/bg-1.webp);
+    height: 100vh;
+    background-size: cover;;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.container .contact-right{
+    position: absolute;
+    top: 65px;
+    background: #ffffff59;
+    right: 10px;
+    width: 320px;
+    height: 400px;
+}
+
+.container .contact-right h4{
+   background-color: #523f3f;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+.container .contact-right i{
+ padding: 0 5px;
+ }
+
+.container .contact-right > div:first-child{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 10px 0;
+    color: white;
+}
+
+.contact-right .call-back{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+
+.contact-right .contact-form{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-right .contact-form form{
+    display: flex;
+    flex-direction: column;;
+    gap: 10px;
+}
+
+.contact-right .contact-form div{
+  position: relative;
+}
+
+
+input{
+    width: 204px;
+    height: 25px;
+    border: none;
+    border-bottom: 1.5px solid black;
+    padding: 10px;
+    background-color: rgb(19 19 21 / 21%);
+    padding-top: 25px;
+}
+
+input:focus{
+   border-bottom:  1.5px solid white;
+   outline: none;
+}
+
+label{
+    color: #3c2e2e;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 15px;
+    transition: left 0.2s, top 0.2s;
+}
+
+input:focus+ label{
+  top: 0;
+  left: 5px ;
+  color:  white
+}
+
+
+.btn{
+    padding: 10px 22px;
+    border-radius: 5px;
+    border: none;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #484752;
+    color: white;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
